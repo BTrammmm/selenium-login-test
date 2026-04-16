@@ -1,23 +1,21 @@
-# Selenium Automation Testing (POM)
+# Selenium Automation Testing Project
 
-## Giới thiệu
-Dự án sử dụng Selenium để tự động hóa kiểm thử ứng dụng web theo mô hình Page Object Model (POM).
+## Description
+This project demonstrates automated testing for a web login system using Selenium and Pytest.
 
-## Kiến trúc
-- tests/: chứa test case
-- pages/: Page Object Model
-- utils/: cấu hình driver
+## Features
+- Page Object Model (POM)
+- Data-driven testing (JSON)
+- Pytest framework
+- HTML Report
 
-## Công nghệ
+## Tech Stack
 - Python
 - Selenium
 - Pytest
 
-## Cách chạy
-pip install -r requirements.txt  
+## How to run
+
+```bash
+pip install -r requirements.txt
 pytest
-
-## Test Cases
-- Login success
-- Google search
-
