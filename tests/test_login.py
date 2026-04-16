@@ -1,16 +1,16 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-import time
+import json
+from pages.login_page import LoginPage
 
-def test_login():
-    driver = webdriver.Chrome()
-    driver.get("https://the-internet.herokuapp.com/login")
+def load_data():
+    with open("data/test_data.json") as f:
+        return json.load(f)
 
-    driver.find_element(By.ID, "username").send_keys("tomsmith")
-    driver.find_element(By.ID, "password").send_keys("SuperSecretPassword!")
-    driver.find_element(By.TAG_NAME, "button").click()
+def test_login_success(driver):
+    data = load_data()
+    user = data["valid_user"]
 
-    time.sleep(2)
+    page = LoginPage(driver)
+    page.open()
+    page.login(user["username"], user["password"])
+
     assert "secure" in driver.current_url
-
-    driver.quit()
