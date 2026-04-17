@@ -1,10 +1,2 @@
-{
-  "valid_user": {
-    "username": "tomsmith",
-    "password": "SuperSecretPassword!"
-  },
-  "invalid_user": {
-    "username": "wrong",
-    "password": "wrong"
-  }
-}
+LOGIN_USER = "admin"
+LOGIN_PASS = "123456"
