@@ -1,21 +1,16 @@
-# Selenium Automation Testing Project
+# Selenium Automation Testing Framework
 
-## Description
-This project demonstrates automated testing for a web login system using Selenium and Pytest.
+## Overview
+This project demonstrates a professional automation testing framework using Selenium, Pytest, and Page Object Model (POM).
 
-## Features
-- Page Object Model (POM)
-- Data-driven testing (JSON)
-- Pytest framework
-- HTML Report
+## Objectives
+- Automate web testing scenarios
+- Apply POM design pattern
+- Build scalable and maintainable test framework
 
-## Tech Stack
+## Technologies
 - Python
 - Selenium
 - Pytest
 
-## How to run
-
-```bash
-pip install -r requirements.txt
-pytest
+## Project Structure
