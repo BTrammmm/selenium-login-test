@@ -1,7 +1,10 @@
-from pages.login_page import LoginPage
+from selenium.webdriver.common.by import By
 
-def test_login(driver):
-    driver.get("https://example.com/login")
+class SearchPage:
+    def __init__(self, driver):
+        self.driver = driver
 
-    login = LoginPage(driver)
-    login.login("admin", "123456")
+    search_box = (By.NAME, "q")
+
+    def search(self, keyword):
+        self.driver.find_element(*self.search_box).send_keys(keyword)
