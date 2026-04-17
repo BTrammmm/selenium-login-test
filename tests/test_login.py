@@ -1,10 +1,13 @@
-from selenium.webdriver.common.by import By
+from pages.login_page import LoginPage
+from utils.driver_setup import get_driver
 
-class SearchPage:
-    def __init__(self, driver):
-        self.driver = driver
+def test_login_success():
+    driver = get_driver()
+    login = LoginPage(driver)
 
-    search_box = (By.NAME, "q")
+    login.open()
+    login.login("tomsmith", "SuperSecretPassword!")
 
-    def search(self, keyword):
-        self.driver.find_element(*self.search_box).send_keys(keyword)
+    assert "You logged into a secure area!" in login.get_message()
+
+    driver.quit()
