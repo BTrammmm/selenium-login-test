@@ -1,15 +1,7 @@
-from selenium import webdriver
-import time
+from pages.search_page import SearchPage
 
-def test_google_search():
-    driver = webdriver.Chrome()
-    driver.get("https://www.google.com")
+def test_search(driver):
+    driver.get("https://google.com")
 
-    search = driver.find_element("name", "q")
-    search.send_keys("Selenium Python")
-    search.submit()
-
-    time.sleep(2)
-    assert "Selenium" in driver.title
-
-    driver.quit()
+    search = SearchPage(driver)
+    search.search("Selenium Python")
