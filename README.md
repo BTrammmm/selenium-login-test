@@ -14,3 +14,14 @@ This project demonstrates a professional automation testing framework using Sele
 - Pytest
 
 ## Project Structure
+selenium-login-test/
+├── tests/ # Test cases
+├── pages/ # Page Object Model
+├── utils/ # Driver setup
+├── data/ # Test data
+├── reports/ # Test reports
+
+## How to Run
+```bash
+pip install -r requirements.txt
+pytest
